@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.21/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="form-container">
+        <h1>Formulario de Registro de Alumnos</h1>
+        <form id="studentForm">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="comments">Comentarios:</label>
+          <textarea id="comments" name="comments"></textarea>
+
+          <button type="submit" class="submit-btn">Registrar</button>
+        </form>
+      </div>
+
+      <h2>Alumnos Registrados</h2>
+      <label for="recordsPerPage">Registros por página:</label>
+      <select id="recordsPerPage">
+        <option value="5">3</option>
+        <option value="10">6</option>
+        <option value="15">9</option>
+      </select>
+
+      <div class="table-container">
+        <table id="studentTable">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Comentarios</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="pagination-container">
+        <button id="prevPage">Página Anterior</button>
+        <button id="nextPage">Siguiente Página</button>
+      </div>
+
+      <div class="export-buttons">
+        <button class="export-btn-pdf" onclick="exportToPDF()">
+          Exportar a PDF
+        </button>
+        <button class="export-btn-exel" onclick="exportToExcel()">
+          Exportar a Excel
+        </button>
+      </div>
+    </div>
+    <script src="form.js"></script>
+  </body>
+</html>

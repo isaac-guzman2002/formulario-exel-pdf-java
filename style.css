@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: lightseagreen;
+  padding-left: 450px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+h2 {
+  text-align: center;
+  font-style: oblique;
+}
+.main-container,
+.form-container {
+  background-position: center;
+  background-color: lightblue;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.table-container{
+  background-color: lightblue;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.792);
+  max-width: 800px;
+  width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-size: 14px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: solid #3498db;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea:hover {
+  border: 2px solid;
+  border-radius: 12px;
+  border-color: aqua;
+}
+#prevPage {
+  background-color: #3498db;
+  color: white;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+#prevPage:hover {
+  border-top-left-radius: 20px;
+  background-color: aqua;
+  transform: translateX(-30px);
+  color: dimgrey;
+}
+#nextPage {
+  background-color: #3498db;
+  color: white;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+#nextPage:hover {
+  border-top-right-radius: 20px;
+  background-color: aqua;
+  transform: translateX(30px);
+  color: dimgrey;
+}
+.submit-btn,
+.export-btn-exel,
+.export-btn-pdf {
+  background-color: #3498db;
+  color: white;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  border-radius: 200px;
+  border: dashed;
+  background-color: lightgreen;
+}
+.export-btn-exel:hover {
+  border-radius: 15px;
+  background-color: darkgreen;
+  transform: translateY(-15px);
+  color: white;
+}
+.export-btn-pdf:hover {
+  border-radius: 15px;
+  background-color: red;
+  transform: translateY(-15px);
+  color: white;
+}
+
+.data-container {
+  margin-top: 20px;
+  display: none;
+}
+.table-container {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table-container,
+th,
+td {
+  border: 5px solid #00f0c0;
+  
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
